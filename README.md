@@ -1,8 +1,21 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React 스터디 목적 프로젝트
 
-Currently, two official plugins are available:
+조*혜씨가 추진한 리엑트 공부
+## 현대백화점 웹사이트
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React 공부 목적 클론 코딩
+
+## 기술 스택
+
+- React.js
+- Vite
+- Router
+
+## 설치 및 시작
+
+npm run dev
+
+```bash
+git clone http://freeive.iptime.org/dndgml99/nike-react
