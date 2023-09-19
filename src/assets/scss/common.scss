@@ -1,0 +1,25 @@
+@import './font/font.scss';
+@import './variables.scss';
+
+body {
+  color: $black;
+  font-family: 'Happiness-Sans' !important;
+  overflow-x: hidden;
+}
+button{
+  cursor: pointer;
+}
+strong {
+  font-weight: $fsBold;
+}
+.section {
+  &-top{
+    margin-top: 96px;
+    &_md {
+      margin-top: 120px;
+    }
+    &_lg {
+      margin-top: 180px;
+    }
+  }
+}

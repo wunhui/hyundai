@@ -1,0 +1,149 @@
+@import '../variables.scss';
+
+.l {
+  &-header{
+    position: fixed;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1440px;
+    .header-wrap{
+      width: 1440px;
+    }
+    &.on {
+      top: 0;
+      width: 100%;
+      .header-wrap {
+        min-width: 1440px;
+        width: calc(100% - 480px);
+      }
+    }
+    transition: .1s linear all;
+    z-index: 1;
+    height: 70px;
+    margin: 0 auto;
+    background-color: $white;
+    .header-wrap{
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      background-color: $white;
+      .content{
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &-brand-select{
+    .brand-select {
+      &-wrap{
+        display: flex;
+        .logo{
+          margin-left: 32px;
+          text-indent: -9999px;
+          width: 139px;
+          height: 22px;
+          background: url('https://www.ehyundai.com/images/webhome2/logo.png') center / contain no-repeat;
+        }
+        .button{
+          padding: 0;
+          margin-left: 8px;
+          .ico-arrowDown {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            &::before{
+              content: '';
+              display: inline-block;
+              vertical-align: middle;
+              width: 100%;
+              height: 100%;
+              background: url('https://www.ehyundai.com/images/webhome2/btn_gnb_20.png') center / contain no-repeat;
+            }
+          }
+        }
+      }
+      .optionList{
+        display: none;
+      }
+    }
+  }
+  &-nav{
+    margin-left: 12px;
+    .gnb{
+      display: flex;
+      &-list{
+        padding: 0 16px;
+        font-size: $fs14;
+      }
+    }
+  }
+  &-service-bar {
+    .service-bar{
+      display: flex;
+      &-list{
+        padding: 0 8px;
+        font-size: $fs12;
+      }
+    }
+  }
+  &-lang-select{
+    padding-right: 20px;
+    .lang-select{
+      .button {
+        width: 40px;
+        height: 24px;
+        cursor: pointer;
+        .ico-lang{
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          &::before{
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.ehyundai.com/images/webhome2/btn_lang.png') center / contain no-repeat;;
+
+          }
+        }
+      }
+      .optionList{
+        display: none;
+      }
+    }
+  }
+  &-brand-search{
+    .brand-search{
+      width: 190px;
+      height: 70px;
+      background-color: $black;
+      color: $white;
+      font-size: $fs14;
+      &:hover{
+        background-color: $button-hover;
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .ico-search{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-left: 6px;
+        &::before{
+          content: '';
+          display: inline-block;
+          vertical-align: middle;
+          width: 100%;
+          height: 100%;
+          background: url('	https://www.ehyundai.com/images/webhome2/ico_gnb_search_20.png') center / contain no-repeat;;
+
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+// font color
+$black:#171A19;
+$gray: #727573;
+$bullet-color: #434545;
+$white: #fff;
+$white-gray: #9B9E9C;
+$borderColor: #EAEBEA;
+$button-hover: #00815A;
+// font size
+$fs12: 12px;
+$fs14: 14px;
+$fs16: 16px;
+$fs18: 18px;
+$fs22: 22px;
+$fs24: 24px;
+$fs32: 32px;
+$fs35: 35px;
+$fs40: 40px;
+$fs48: 48px;
+$fs80: 80px;
+$fs100: 100px;
+$fs240: 240px;
+
+// font weight
+$regular: 400;
+$fs-semi-bold: 700;
+$fsBold: 900;
+
+// font text shadow
+@mixin textShadow {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}

@@ -1,0 +1,98 @@
+@import '@scss/variables.scss';
+.l-contents {
+  position: relative;
+  width: 1440px;
+  height: 840px;
+  margin: 0 auto;
+  margin-top: 180px;
+  h3{
+    width: 1440px;
+    margin: 0 auto;
+    font: {
+      size: $fs32;
+      weight: $fsBold;
+    }
+    padding-bottom: 32px;
+  }
+  .marquee-container {
+    overflow-x: initial !important;
+  }
+  .text-slide {
+    position: absolute;
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    display: flex;
+    gap: 78px;
+    li{
+      position: relative;
+      width: 100%;
+      font-size: 240px;
+      color: $white;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+  }
+  .content-wrap{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    overflow: hidden;
+    h2{
+      margin-right: 44px;
+      font: {
+        size: 80px;
+        weight: $fsBold;
+      }
+    }
+    .marquee-container{
+      position: absolute;
+      // width: 100% !important;
+      left: -640px;
+     .marquee {
+      .child {
+        margin-left: 12px;
+      }
+    }
+    }
+    ul {
+      position: relative;
+      width: 351px;
+      height: 100%;
+      &:first-of-type{
+        margin-right: 12px;
+      }
+    }
+
+    .img-wrap{
+      .tag{
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        padding-bottom: 3px;
+        background-color: #171A19;
+        z-index: 10;
+        span{
+          background-color: $white;
+          position: relative;
+          display: block;
+          margin-left: 3px;
+          margin-right: -3px;
+          padding: 2px 8px 3px;
+          font: {
+            size: $fs12;
+            weight: $fs-semi-bold;
+          }
+          color: $black;
+          line-height: 1.3;
+        }
+      }
+    }
+
+  }
+}

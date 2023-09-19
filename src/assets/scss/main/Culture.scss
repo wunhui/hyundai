@@ -1,0 +1,108 @@
+@import '@scss/variables.scss';
+.l-culture {
+  overflow: hidden;
+  position: relative;
+  max-width: 1920px;
+  min-width: 1440px;
+  margin: 0 auto;
+  margin-top: 180px;
+  h3{
+    width: 1440px;
+    margin: 0 auto;
+    font: {
+      size: $fs32;
+      weight: $fsBold;
+    }
+    padding-bottom: 32px;
+  }
+  .mySwiper{
+    overflow: initial;
+    .swiper-wrapper{
+      .swiper-slide{
+        position: relative;
+        width: 472px !important;
+        height: 472px !important;
+        margin-right: 9px;
+        &::before{
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: linear-gradient(168.48deg, rgba(0, 0, 0, 0) 11.61%, rgba(0, 0, 0, 0.5) 85.71%);
+        }
+        .tag{
+          position: absolute;
+          top: 16px;
+          left: 16px;
+          padding-bottom: 3px;
+          background-color: #171A19;
+          z-index: 10;
+          span{
+            background-color: $white;
+            position: relative;
+            display: block;
+            margin-left: 3px;
+            margin-right: -3px;
+            padding: 2px 8px 3px;
+            font: {
+              size: $fs12;
+              weight: $fs-semi-bold;
+            }
+            color: $black;
+            line-height: 1.3;
+          }
+        }
+        dl{
+          position: absolute;
+          bottom: 24px;
+          left: 24px;
+          color: $white;
+          line-height: 1.5;
+          dt{
+            font: {
+              size: $fs22;
+              weight: $fs-semi-bold;
+            }
+            &.title_only{
+              padding-bottom: 32px;
+            }
+          }
+          dd{
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+    .swiper-button{
+      &-prev, &-next{
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        top: initial ;
+        bottom: initial !important;
+        left: initial !important;
+        top: -20px;
+        &::after{
+          content: '' !important;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background: url(https://www.ehyundai.com/images/webhome2/ico_arrow_right_28_black.png) center / contain no-repeat;
+        }
+      }
+      &-next {
+        right: calc(50% - 720px);
+      }
+      &-prev {
+        right: calc(50% - 680px);
+        transform: rotate(180deg);
+      } 
+    }
+  }
+  img{
+    width: 472px;
+  }
+}

@@ -1,0 +1,138 @@
+@import '../variables.scss';
+.main-top{
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  max-width: 2560px;
+  min-width: 1920px;
+  height: calc(max(min(2560px, 100vw), 1920px) * 0.4583);
+  overflow: hidden;
+  margin: 0 auto;
+  .visual {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 62.5%;
+    height: 100%;
+    animation: visualItem 1s ease-in;
+    img{
+      object-position: top;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @keyframes visualItem {
+    from {
+      width: 100%;
+      z-index: 1;
+      height: 100%;
+    }
+    to {
+        z-index: 1;
+        width: 62.5%;
+        height: 100%;
+    }
+  }
+  .swiper{
+    position: absolute;
+    left: 0;
+    width: 62.5%;
+    height: 100%;
+    img{
+      width: 100%;
+    }
+    &-pagination {
+      width: auto !important;
+      max-width: 977px;
+      min-width: 577px;
+      top: initial !important;
+      left: 240px !important;
+      right: 383px;
+      bottom: 53px;
+      &-progressbar-fill{
+        background-color: $white !important;
+      }
+    }
+    &-button{
+      &-prev,&-next {
+        position: absolute;
+        top: initial;
+        left: initial;
+        bottom: 41px !important;
+        width: 28px !important;
+        height: 28px !important;
+        &::after{
+          content: '' !important;
+          width: 28px;
+          height: 28px;
+        }
+      }
+      &-next {
+        right: 150px;
+        &::after{
+          background: url('https://www.ehyundai.com/images/webhome2/ico_arrow_right_28_white.png') center / contain no-repeat;
+        }
+      }
+      &-prev {
+        right: 188px;
+        &::after{
+          transform: rotate(180deg);
+          background: url('	https://www.ehyundai.com/images/webhome2/ico_arrow_right_28_white.png') center / contain no-repeat;
+        }
+      }
+    }
+    .button-stop{
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      right: 110px;
+      bottom: 40px;
+      z-index: 1;
+      padding: 0;
+      .ico-start, .ico-stop {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        &::before{
+          content: '';
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .ico-start{
+        &::before{
+          background: url(https://www.ehyundai.com/images/webhome2/ico_play_28_white.png) center / contain no-repeat;
+        }
+      }
+      .ico-stop{
+        &::before{
+          background: url(https://www.ehyundai.com/images/webhome2/ico_pause_28_white.png) center / contain no-repeat;
+        }
+      }
+    }
+  }
+  .slide-banner{
+    position: absolute;
+    right: 0;
+    width: 37.5%;
+    height: 100%;
+    animation: slideBannerWidth 1s ease-in;
+    img{
+      width: 100%;
+    }
+    @keyframes slideBannerWidth {
+      from {
+        right: -700px;
+        z-index: 1;
+        height: 100%;
+      }
+      to {
+        right: 0;
+        z-index: 1;
+        height: 100%;
+      }
+    }
+  }
+}

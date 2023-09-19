@@ -1,0 +1,61 @@
+@import '@scss/variables.scss';
+.l-banner {
+  overflow: hidden;
+  position: relative;
+  max-width: 1430px;
+  margin: 0 auto;
+  padding-top: 120px;
+  h3{
+    width: 1440px;
+    margin: 0 auto;
+    font: {
+      size: $fs32;
+      weight: $fsBold;
+    }
+    padding-bottom: 32px;
+  }
+  .mySwiper{
+    overflow: initial;
+    .swiper-wrapper{
+      .swiper-slide{
+        position: relative;
+        height: 200px;
+        .img-wrap{
+          height: 100%;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .swiper-button{
+      &-prev, &-next{
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        top: initial ;
+        bottom: initial !important;
+        left: initial !important;
+        top: -20px;
+        &::after{
+          content: '' !important;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background: url(https://www.ehyundai.com/images/webhome2/ico_arrow_right_28_black.png) center / contain no-repeat;
+        }
+      }
+      &-next {
+        right: calc(50% - 720px);
+      }
+      &-prev {
+        right: calc(50% - 680px);
+        transform: rotate(180deg);
+      } 
+    }
+  }
+  img{
+    width: 472px;
+  }
+}

@@ -1,0 +1,206 @@
+@import '@scss/variables.scss';
+.l-brand {
+  overflow: hidden;
+  position: relative;
+  max-width: 1430px;
+  margin: 0 auto;
+  margin-top: 180px;
+  .top{
+    display: flex;
+    gap: 64px;
+    h3{
+      font: {
+        size: $fs32;
+        weight: $fsBold;
+      }
+      padding-bottom: 32px;
+    }
+    .button-wrap{
+      display: flex;
+      gap: 32px;
+      button{
+        color: $white-gray;
+        font: {
+          size: $fs24;
+          weight:$fsBold;
+        }
+        &.active {
+          position: relative;
+          color: $black;
+          &::before{
+            border-width: 4px;
+            border-style: solid;
+            border-color: #171A19 transparent transparent #171A19;
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: initial;
+            bottom: 0;
+            right: -2px;
+            width: 0;
+            height: 0;
+          }
+        }
+      }
+    }
+  }
+  .mySwiper{
+    overflow: initial;
+    .swiper-wrapper{
+      .swiper-slide{
+        position: relative;
+        width: 100%;
+        ul {
+          display: flex;
+          height: 600px;
+          li {
+            position: relative;
+            display: inline-block;
+            flex: 1 1;
+            &.main{
+              flex: 5.23 1 0;
+              height: 100%;
+              .img-wrap{
+                height: 100%;
+                img {
+                  height: 100%;
+                }
+                &::after{
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  z-index: 0;
+                  background: linear-gradient(192.26deg, rgba(0, 0, 0, 0) 18.01%, rgba(0, 0, 0, 0.3) 92.31%);
+                }
+              }
+              .text-wrap {
+                position: absolute;
+                bottom: 64px;
+                right: 72px;
+                width: 340px;
+                color: $white;
+                .title {
+                  line-height: 1.4;
+                  letter-spacing: -0.25px;
+                  font: {
+                    size: $fs48;
+                    weight: $fsBold;
+                  }
+                }
+                .desc {
+                  font: {
+                    size: $fs18;
+                    weight: $fsBold;
+                  }
+                  line-height: 1.4;
+                  letter-spacing: -0.25px;
+                  margin-top: 8px;
+                }
+                .button-wrap{
+                  width: 172px;
+                  height: 40px;
+                  margin-top: 32px;
+                  button {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    border: 2px solid $white;
+                    color: $white;
+                    text-align: left;
+                    font: {
+                      size: $fs14;
+                      weight: $fsBold;
+                    }
+                    &::before{
+                      content: '';
+                      display: inline-block;
+                      width: 24px;
+                      height: 24px;
+                      position: absolute;
+                      right: 16px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      background: url('/image/icon-arrowRw.png') center / contain no-repeat;
+                    }
+                  }
+                }
+              }
+            }
+            &.sub{
+              width: 200px;
+              .img-wrap{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                .img {
+                  flex: 2 2;
+                  img{
+                    width: 100%;
+                  }
+                }
+                .text{
+                  flex: 1 1 ;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font: {
+                    size: 18px;
+                    weight: 700;
+                  }
+                  text-align: center;
+                  color: $black;
+                  line-height: 1.4;
+                  letter-spacing: -0.25px;
+                }
+              }
+              .img-list {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                .img {
+                  flex: 1;
+                  img {
+                    object-fit: cover;
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .swiper-button{
+      &-prev, &-next{
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        top: initial ;
+        bottom: initial !important;
+        left: initial !important;
+        top: -20px;
+        &::after{
+          content: '' !important;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background: url(https://www.ehyundai.com/images/webhome2/ico_arrow_right_28_black.png) center / contain no-repeat;
+        }
+      }
+      &-next {
+        right: calc(50% - 720px);
+      }
+      &-prev {
+        right: calc(50% - 680px);
+        transform: rotate(180deg);
+      } 
+    }
+  }
+}
