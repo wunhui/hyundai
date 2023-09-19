@@ -16,6 +16,3 @@ React 공부 목적 클론 코딩
 ## 설치 및 시작
 
 npm run dev
-
-```bash
-git clone http://freeive.iptime.org/dndgml99/nike-react
